@@ -12,6 +12,7 @@ const NavBar = () => {
   return (
     <AppBar position="fixed">
       <Stack
+        marginY={1}
         direction="row"
         justifyContent="space-evenly"
         alignItems="center"
