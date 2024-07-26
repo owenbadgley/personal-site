@@ -1,28 +1,22 @@
 import { Stack, Typography, TypographyProps } from "@mui/material";
-import ProjectCard from "./ProjectCard";
-import image from "../assets/ds3_game-thumbnail.jpg";
+import ProjectCard, { Project } from "./ProjectCard";
 
 interface Props {
   children: string;
   id: number;
   alignment: TypographyProps["align"];
+  projectList: Project[];
 }
 
-const Subsection = ({ children, id, alignment }: Props) => {
-  const project = {
-    title: "Dark Souls 3",
-    description: "the third dark souls game, linear but great bosses",
-    image: image,
-    category: "videogame",
-    link: "ww.",
-  };
-
+const Subsection = ({ children, id, alignment, projectList }: Props) => {
   return (
     <Stack>
       <Typography variant="h3" color="secondary" align={alignment}>
         {children}
       </Typography>
-      <ProjectCard project={project}></ProjectCard>
+      {projectList.map((project) => (
+        <ProjectCard project={project}></ProjectCard>
+      ))}
     </Stack>
   );
 };

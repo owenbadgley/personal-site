@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Card,
   CardContent,
   CardMedia,
@@ -20,6 +21,15 @@ interface Props {
 }
 
 const ProjectCard = ({ project }: Props) => {
+  const openInNewTab = () => {
+    const newWindow = window.open(
+      project.link,
+      "_blank",
+      "noopener, noreferrer"
+    );
+    if (newWindow) newWindow.opener = null;
+  };
+
   return (
     <Card sx={{ display: "flex" }}>
       <Stack
@@ -28,16 +38,24 @@ const ProjectCard = ({ project }: Props) => {
         direction="row"
         justifyContent="space-between"
       >
-        <Box sx={{ display: "flex", flexDirection: "column" }}>
-          <CardContent sx={{ flex: "1 0 auto" }}>
-            <Typography component="div" variant="h5">
-              {project.title}
-            </Typography>
-            <Typography variant="body1" color="secondary" component="div">
-              {project.description}
-            </Typography>
-          </CardContent>
-        </Box>
+        <Stack spacing={6} margin={3}>
+          <Box sx={{ display: "flex", flexDirection: "column" }}>
+            <CardContent sx={{ flex: "1 0 auto" }}>
+              <Typography component="div" variant="h5">
+                {project.title}
+              </Typography>
+              <Typography
+                marginTop={2}
+                variant="body1"
+                color="secondary"
+                component="div"
+              >
+                {project.description}
+              </Typography>
+            </CardContent>
+          </Box>
+          <Button onClick={() => openInNewTab()}>GitHub Link</Button>
+        </Stack>
         <CardMedia
           component="img"
           sx={{ width: 400 }}
