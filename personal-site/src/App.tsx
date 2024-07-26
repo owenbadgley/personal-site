@@ -3,6 +3,7 @@ import "./App.css";
 import About from "./components/About";
 import NavBar from "./components/NavBar";
 import Subsection from "./components/Subsection";
+import ProjectCard from "./components/ProjectCard";
 
 function App() {
   return (
@@ -14,9 +15,15 @@ function App() {
         //divider={<Divider flexItem variant="middle"></Divider>}
       >
         <About></About>
-        <Subsection id={1}>My Video Games</Subsection>
-        <Subsection id={2}>Stuff I've Made</Subsection>
-        <Subsection id={3}>Class Projects</Subsection>
+        <Subsection alignment="right" id={1}>
+          My Video Games
+        </Subsection>
+        <Subsection alignment="left" id={2}>
+          Stuff I've Made
+        </Subsection>
+        <Subsection alignment="right" id={3}>
+          Class Projects
+        </Subsection>
       </Stack>
     </div>
   );
