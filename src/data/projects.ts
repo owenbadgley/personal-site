@@ -1,5 +1,5 @@
 import { Project } from "../components/ProjectCard"
-import game_finder from "../assets/game_finder.png"
+import image from "../assets/game_finder.png"
 
 
 export const projectList: Project[] = [
@@ -7,9 +7,9 @@ export const projectList: Project[] = [
     {
         title: 'Game Finder',
         description: 'A simple website that I created while learning to use react. It interfaces with the API of a website called RAWG, and uses the data recieved to find and filter a list of popular (and unpopular) video games, so that they can be viewed and discovered by the user.',
-        image: '',
-        category: '',
-        link: ''
+        image: image,
+        category: 'game',
+        link: 'https://github.com/owenbadgley/video-game-finder'
     },
     {
         title: '',
