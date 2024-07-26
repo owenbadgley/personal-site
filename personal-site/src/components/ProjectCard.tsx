@@ -6,8 +6,6 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import React from "react";
-import image from "../assets/ds3_game-thumbnail.jpg";
 
 export interface Project {
   title: string;
@@ -24,7 +22,12 @@ interface Props {
 const ProjectCard = ({ project }: Props) => {
   return (
     <Card sx={{ display: "flex" }}>
-      <Stack width={8000} direction="row" justifyContent="space-between">
+      <Stack
+        sx={{ width: "100%" }}
+        spacing={3}
+        direction="row"
+        justifyContent="space-between"
+      >
         <Box sx={{ display: "flex", flexDirection: "column" }}>
           <CardContent sx={{ flex: "1 0 auto" }}>
             <Typography component="div" variant="h5">
@@ -38,7 +41,7 @@ const ProjectCard = ({ project }: Props) => {
         <CardMedia
           component="img"
           sx={{ width: 400 }}
-          src="../assets/ds3_game-thumbnail.jpg"
+          image={project.image}
           alt="Project Image"
         ></CardMedia>
       </Stack>

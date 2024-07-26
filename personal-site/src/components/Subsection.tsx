@@ -1,7 +1,6 @@
-import { Divider, Stack, Typography, TypographyProps } from "@mui/material";
-import React from "react";
+import { Stack, Typography, TypographyProps } from "@mui/material";
 import ProjectCard from "./ProjectCard";
-import { Project } from "./ProjectCard";
+import image from "../assets/ds3_game-thumbnail.jpg";
 
 interface Props {
   children: string;
@@ -13,7 +12,7 @@ const Subsection = ({ children, id, alignment }: Props) => {
   const project = {
     title: "Dark Souls 3",
     description: "the third dark souls game, linear but great bosses",
-    image: "personal-sitesrcassetsds3_game-thumbnail.jpg",
+    image: image,
     category: "videogame",
     link: "ww.",
   };
