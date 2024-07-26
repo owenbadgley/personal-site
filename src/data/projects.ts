@@ -1,4 +1,5 @@
 import { Project } from "../components/ProjectCard"
+import game_finder from "../assets/game_finder.png"
 
 
 export const projectList: Project[] = [
