@@ -15,7 +15,7 @@ const Subsection = ({ children, id, alignment, projectList }: Props) => {
         {children}
       </Typography>
       {projectList.map((project) => (
-        <ProjectCard project={project}></ProjectCard>
+        <ProjectCard project={project} key={project.title}></ProjectCard>
       ))}
     </Stack>
   );

@@ -31,7 +31,7 @@ const ProjectCard = ({ project }: Props) => {
   };
 
   return (
-    <Card sx={{ display: "flex" }}>
+    <Card sx={{ display: "flex" }} variant="outlined">
       <Stack
         sx={{ width: "100%" }}
         spacing={3}
