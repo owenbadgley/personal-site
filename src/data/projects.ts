@@ -1,6 +1,6 @@
 import { Project } from "../components/ProjectCard"
-import game_finder_png from "../assets/"
-import homeostasis_png from "../assets/homeostasis.png"
+import game_finder_png from "../images/game_finder.png"
+import homeostasis_png from "../images/homeostasis.png"
 
 export const projectList: Project[] = [
     //game finder website
